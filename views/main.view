@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	@@include('./header.view')
+	</head>
+	<body>
+		<div id="logo" class="hide">
+			@@include('../images/logo.svg')
+		</div>
+		<div id="start-menu" style="display:none;">
+			<a>Library</a>
+			<a>Channels</a>
+			<a>Users</a>
+			<a>Advanced</a>
+			<a>Start</a>
+		</div>
+		<div id="library-bar">
+			<div class="master active">Music</div>
+			<div class="more-music active">
+				<div class="alphabet">A</div>
+				<div class="artist">alpha</div>
+				<div class="artist">alpha</div>
+				<div class="artist active">alpha</div>
+				<div class="artist">alpha</div>
+				<div class="artist">alpha</div>
+				<div class="artist">alpha</div>
+				<div class="artist">alpha</div>
+				<div class="artist">alpha</div>
+				<div class="alphabet">B</div>
+				<div class="artist">betafeg</div>
+				<div class="artist">betafeg</div>
+				<div class="artist">betafeg</div>
+				<div class="artist">betafeg</div>
+				<div class="artist">betafeg</div>
+				<div class="artist">betafeg</div>
+				<div class="artist">betafeg</div>
+				<div class="artist">betafeg</div>
+				<div class="artist">betafeg</div>
+				<div class="artist">betafeg</div>
+				<div class="alphabet">C</div>
+				<div class="alphabet">D</div>
+				<div class="alphabet">E</div>
+				<div class="alphabet">F</div>
+			</div>
+			<div class="master">Movies</div>
+			<div class="master">Series</div>
+			<div class="hr"></div>
+			<div class="adder"><span>+</span>Add Folder</div>
+			<div class="source"><span>-</span>FolderName</div>
+			<div class="source"><span>-</span>FolderName</div>
+			<div class="source"><span>-</span>FolderName</div>
+			<div class="source"><span>-</span>FolderName</div>
+		</div>
+		<div id="grid-view">
+			<div class="grid-cell">
+				<div class="image"></div>
+				<div class="title">Album Title</div>
+			</div>
+			<div class="grid-cell">
+				<div class="image"></div>
+				<div class="title">Album Title</div>
+			</div>
+			<div class="grid-cell">
+				<div class="image"></div>
+				<div class="title">Album Title</div>
+			</div>
+			<div class="grid-cell">
+				<div class="image"></div>
+				<div class="title">Album Title</div>
+			</div>
+			<div class="grid-cell">
+				<div class="image"></div>
+				<div class="title">Album Title</div>
+			</div>
+			<div class="grid-cell">
+				<div class="image"></div>
+				<div class="title">Album Title</div>
+			</div>
+			<div class="grid-cell">
+				<div class="image"></div>
+				<div class="title">Album Title</div>
+			</div>
+			<div class="grid-cell">
+				<div class="image"></div>
+				<div class="title">Album Title</div>
+			</div>
+			<div class="grid-cell">
+				<div class="image"></div>
+				<div class="title">Album Title</div>
+			</div>
+			<div class="grid-cell">
+				<div class="image"></div>
+				<div class="title">Album Title</div>
+			</div>
+			<div class="grid-cell">
+				<div class="image"></div>
+				<div class="title">Album Title</div>
+			</div>
+			<div class="grid-cell">
+				<div class="image"></div>
+				<div class="title">Album Title</div>
+			</div>
+			<div class="grid-cell">
+				<div class="image"></div>
+				<div class="title">Album Title</div>
+			</div>
+			<div class="grid-cell">
+				<div class="image"></div>
+				<div class="title">Album Title</div>
+			</div>
+			<div class="grid-cell">
+				<div class="image"></div>
+				<div class="title">Album Title</div>
+			</div>
+			<div class="grid-cell">
+				<div class="image"></div>
+				<div class="title">Album Title</div>
+			</div>
+			<div class="grid-cell">
+				<div class="image"></div>
+				<div class="title">Album Title</div>
+			</div>
+			<div class="grid-cell">
+				<div class="image"></div>
+				<div class="title">Album Title</div>
+			</div>
+			<div class="grid-cell">
+				<div class="image"></div>
+				<div class="title">Album Title</div>
+			</div>
+			<div class="grid-cell">
+				<div class="image"></div>
+				<div class="title">Album Title</div>
+			</div>
+			<div class="grid-cell">
+				<div class="image"></div>
+				<div class="title">Album Title</div>
+			</div>
+			<div class="grid-cell">
+				<div class="image"></div>
+				<div class="title">Album Title</div>
+			</div>
+			<div class="grid-cell">
+				<div class="image"></div>
+				<div class="title">Album Title</div>
+			</div>
+		</div>
+	</body>
+</html>

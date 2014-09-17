@@ -1,0 +1,20 @@
+{
+  "name": "union-upnp-settings",
+  "version": "0.1.0",
+  "description": "The settings frontend for the upnp server",
+  "devDependencies": {
+    "grunt": "~0.4.4",
+    "grunt-contrib-watch": "~0.4.4",
+    "grunt-contrib-jshint": "~0.10.0",
+    "grunt-contrib-requirejs": "~0.4.1",
+    "grunt-sass": "~0.13.0",
+    "time-grunt": "~0.1.1",
+    "grunt-include-replace": "~2.0.0",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-ssh": "~0.11.2",
+    "grunt-node-webkit-builder": "~0.2.3"
+  },
+  "author": "Alex Boatwright <drdelambre@gmail.com>",
+  "license": "MIT",
+  "private": true
+}

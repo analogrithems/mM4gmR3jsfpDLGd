@@ -1,0 +1,6 @@
+node_modules
+dist/*
+cache/*
+build/*
+!build/package.json
+!build/fonts

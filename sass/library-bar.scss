@@ -1,0 +1,137 @@
+#library-bar {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	width: 300px;
+
+	padding: 10px 20px;
+
+	.master {
+		font-size: 32px;
+		padding-top: 20px;
+		transition: color 0.2, transform 0.2;
+		transform-origin: left center;
+		cursor: pointer;
+
+		&:hover {
+			color: $green;
+			transform: scale(1.01);
+		}
+		&:active {
+			transform: scale(1.05);
+		}
+		&.active {
+			color: $green;
+		}
+	}
+	.more-music {
+		max-height: 0;
+		overflow: hidden;
+		transition: max-height 0.5s;
+
+		&.active {
+			max-height: 500px;
+		}
+	}
+	.alphabet {
+		font-size: 30px;
+		position: relative;
+		color: $green;
+		padding: 20px 0 4px;
+		padding-left: 20px;
+
+		&:before,
+		&:after {
+			content: '';
+			position: absolute;
+			top: 30px;
+			left: 0;
+			right: 0;
+			height: 1px;
+			background: $grey;
+			opacity: 0.2;
+		}
+		&:before {
+			right: auto;
+			width: 10px;
+		}
+		&:after {
+			left: 40px;
+		}
+	}
+	.artist {
+		font-size: 16px;
+		font-weight: 100;
+		font-family: 'quicksand';
+		padding: 4px 0;
+		padding-left: 10px;
+		cursor: pointer;
+
+		&:active,
+		&.active {
+			color: $green;
+		}
+	}
+	.hr {
+		height: 1px;
+		background: #C3CECE;
+		margin: 10px 20px;
+	}
+	.adder {
+		font-size: 32px;
+		padding: 10px 0;
+		transition: color 0.2s;
+
+		span {
+			border-radius: 50%;
+			background: $green;
+			float: right;
+			font-size: 50px;
+			color: #fff;
+			padding: 3px 6px 0 8px;
+			line-height: 29px;
+			text-align: center;
+			cursor: pointer;
+			transition: transform 0.2s, box-shadow 0.2s;
+
+		}
+		&:active {
+			color: $green;
+
+			span {
+				box-shadow: -2px 2px 3px rgba(0,0,0,0.1);
+				transform: rotate(-90deg);
+			}
+		}
+	}
+	.source {
+		font-size: 16px;
+		font-weight: 100;
+		font-family: 'quicksand';
+		padding: 4px 0;
+		transition: color 0.2s;
+		cursor: pointer;
+
+		span {
+			color: $red;
+			float: right;
+			padding: 3px 5px;
+			border-radius: 50%;
+			font-size: 26px;
+			line-height: 14px;
+			margin-right: 5px;
+
+			transition: background 0.2s, color 0.2s, transform 0.2s;
+		}
+
+		&:active {
+			color: $red;
+			span {
+				background: $red;
+				color: #fff;
+				transform: rotate(-180deg);
+			}
+		}
+	}
+}

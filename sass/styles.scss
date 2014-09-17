@@ -1,0 +1,12 @@
+$green: #97CF91;
+$grey: #767777;
+$red: #F25E5C;
+
+@import "library-bar";
+@import "grid";
+
+#logo.hide {
+	opacity: 0.3;
+	transform: scale(0.5) translateY(140px) translateX(-60px);
+	transform-origin: top center;
+}
