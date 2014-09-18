@@ -9,7 +9,7 @@
 		margin: 10px;
 		display: inline-block;
 		cursor: pointer;
-		transition: transform 0.2s;
+		transition: -webkit-transform 0.2s;
 
 		.image {
 			width: 160px;
@@ -25,10 +25,10 @@
 		}
 
 		&:hover {
-			transform: scale(1.02);
+			-webkit-transform: scale(1.02);
 		}
 		&:active {
-			transform: scale(1.05);
+			-webkit-transform: scale(1.05);
 		}
 	}
 }

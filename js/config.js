@@ -12,3 +12,4 @@ require.config({
 
 // Load your page js here
 // Example: require(['site/pages/login']);
+require(['site/pages/main']);

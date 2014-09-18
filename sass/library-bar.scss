@@ -10,8 +10,8 @@
 	.master {
 		font-size: 32px;
 		padding-top: 20px;
-		transition: color 0.2, transform 0.2;
-		transform-origin: left center;
+		transition: color 0.2, -webkit-transform 0.2;
+		-webkit-transform-origin: left center;
 		cursor: pointer;
 
 		&:hover {
@@ -93,7 +93,7 @@
 			line-height: 29px;
 			text-align: center;
 			cursor: pointer;
-			transition: transform 0.2s, box-shadow 0.2s;
+			transition: -webkit-transform 0.2s, box-shadow 0.2s;
 
 		}
 		&:active {
@@ -101,7 +101,7 @@
 
 			span {
 				box-shadow: -2px 2px 3px rgba(0,0,0,0.1);
-				transform: rotate(-90deg);
+				-webkit-transform: rotate(-90deg);
 			}
 		}
 	}
@@ -122,7 +122,7 @@
 			line-height: 14px;
 			margin-right: 5px;
 
-			transition: background 0.2s, color 0.2s, transform 0.2s;
+			transition: background 0.2s, color 0.2s, -webkit-transform 0.2s;
 		}
 
 		&:active {
@@ -130,7 +130,7 @@
 			span {
 				background: $red;
 				color: #fff;
-				transform: rotate(-180deg);
+				-webkit-transform: rotate(-180deg);
 			}
 		}
 	}
