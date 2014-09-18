@@ -4,6 +4,7 @@
 	@@include('./header.view')
 	</head>
 	<body>
+		@@include('./movie-template.view')
 		<div id="logo">
 			@@include('../images/logo.svg')
 		</div>
@@ -14,7 +15,9 @@
 			<a data-location="advanced">Advanced</a>
 			<a data-location="start">Start</a>
 		</div>
-		<div id="library-bar" style="display:none;">
+		<div id="library-bar">
+			<div class="master">Back</div>
+			<div class="hr"></div>
 			<div class="master">Music</div>
 			<div class="more-music">
 				<div class="alphabet">A</div>
@@ -51,99 +54,6 @@
 			<div class="source"><span>-</span>FolderName</div>
 			<div class="source"><span>-</span>FolderName</div>
 		</div>
-		<div id="grid-view" style="display:none;">
-			<div class="grid-cell">
-				<div class="image"></div>
-				<div class="title">Album Title</div>
-			</div>
-			<div class="grid-cell">
-				<div class="image"></div>
-				<div class="title">Album Title</div>
-			</div>
-			<div class="grid-cell">
-				<div class="image"></div>
-				<div class="title">Album Title</div>
-			</div>
-			<div class="grid-cell">
-				<div class="image"></div>
-				<div class="title">Album Title</div>
-			</div>
-			<div class="grid-cell">
-				<div class="image"></div>
-				<div class="title">Album Title</div>
-			</div>
-			<div class="grid-cell">
-				<div class="image"></div>
-				<div class="title">Album Title</div>
-			</div>
-			<div class="grid-cell">
-				<div class="image"></div>
-				<div class="title">Album Title</div>
-			</div>
-			<div class="grid-cell">
-				<div class="image"></div>
-				<div class="title">Album Title</div>
-			</div>
-			<div class="grid-cell">
-				<div class="image"></div>
-				<div class="title">Album Title</div>
-			</div>
-			<div class="grid-cell">
-				<div class="image"></div>
-				<div class="title">Album Title</div>
-			</div>
-			<div class="grid-cell">
-				<div class="image"></div>
-				<div class="title">Album Title</div>
-			</div>
-			<div class="grid-cell">
-				<div class="image"></div>
-				<div class="title">Album Title</div>
-			</div>
-			<div class="grid-cell">
-				<div class="image"></div>
-				<div class="title">Album Title</div>
-			</div>
-			<div class="grid-cell">
-				<div class="image"></div>
-				<div class="title">Album Title</div>
-			</div>
-			<div class="grid-cell">
-				<div class="image"></div>
-				<div class="title">Album Title</div>
-			</div>
-			<div class="grid-cell">
-				<div class="image"></div>
-				<div class="title">Album Title</div>
-			</div>
-			<div class="grid-cell">
-				<div class="image"></div>
-				<div class="title">Album Title</div>
-			</div>
-			<div class="grid-cell">
-				<div class="image"></div>
-				<div class="title">Album Title</div>
-			</div>
-			<div class="grid-cell">
-				<div class="image"></div>
-				<div class="title">Album Title</div>
-			</div>
-			<div class="grid-cell">
-				<div class="image"></div>
-				<div class="title">Album Title</div>
-			</div>
-			<div class="grid-cell">
-				<div class="image"></div>
-				<div class="title">Album Title</div>
-			</div>
-			<div class="grid-cell">
-				<div class="image"></div>
-				<div class="title">Album Title</div>
-			</div>
-			<div class="grid-cell">
-				<div class="image"></div>
-				<div class="title">Album Title</div>
-			</div>
-		</div>
+		<div id="movie-grid" class="grid"></div>
 	</body>
 </html>

@@ -1,15 +1,26 @@
-#grid-view {
+.grid {
 	margin-left: 340px;
 	position: relative;
 	text-align: center;
 	padding-top: 30px;
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity 0.5s, visibility 0 linear 0.5s;
+
+	&.show {
+		transition: none;
+		opacity: 1;
+		visibility: visible;
+	}
 
 	.grid-cell {
 		width: 160px;
 		margin: 10px;
 		display: inline-block;
 		cursor: pointer;
-		transition: -webkit-transform 0.2s;
+		-webkit-transform: scale(0.8);
+		opacity: 0;
+		transition: -webkit-transform 0.2s, opacity 0.2s;
 
 		.image {
 			width: 160px;
@@ -24,6 +35,10 @@
 			margin-top: 6px;
 		}
 
+		&.show {
+			opacity: 1;
+			-webkit-transform: scale(1);
+		}
 		&:hover {
 			-webkit-transform: scale(1.02);
 		}

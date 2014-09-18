@@ -2,14 +2,20 @@
 	position: absolute;
 	top: 0;
 	bottom: 0;
-	left: 0;
-	width: 300px;
+	left: -240px;
+	width: 200px;
 
 	padding: 10px 20px;
 
+	transition: left 0.5s;
+
+	&.show {
+		left: 0;
+	}
+
 	.master {
 		font-size: 32px;
-		padding-top: 20px;
+		padding: 10px 0;
 		transition: color 0.2, -webkit-transform 0.2;
 		-webkit-transform-origin: left center;
 		cursor: pointer;
@@ -76,7 +82,7 @@
 	.hr {
 		height: 1px;
 		background: #C3CECE;
-		margin: 10px 20px;
+		margin: 10px 0;
 	}
 	.adder {
 		font-size: 32px;

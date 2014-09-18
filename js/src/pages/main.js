@@ -55,13 +55,14 @@ require([
 		}
 	});
 
+	lib.route('*',function(){
+		lib.dom('#logo').addClass('hide');
+	});
 	lib.route('',function(){
 		lib.dom('#logo').removeClass('hide');
 		lib.dom('#start-menu').addClass('show');
-		console.log('enter');
 	},function(){
 		lib.dom('#logo').addClass('hide');
 		lib.dom('#start-menu').removeClass('show');
-		console.log('leave');
 	});
 });
