@@ -14,6 +14,12 @@
     "grunt-ssh": "~0.11.2",
     "grunt-node-webkit-builder": "~0.2.3"
   },
+  "dependencies": {
+    "tingodb": "latest",
+    "fluent-ffmpeg": "latest",
+    "mime": "latest",
+    "id3js": "latest"
+  },
   "author": "Alex Boatwright <drdelambre@gmail.com>",
   "license": "MIT",
   "private": true
