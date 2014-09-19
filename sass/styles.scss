@@ -7,6 +7,6 @@ $red: #F25E5C;
 
 #logo.hide {
 	opacity: 0.3;
-	transform: scale(0.5) translateY(140px) translateX(-60px);
-	transform-origin: top center;
+	-webkit-transform: scale(0.5) translateY(-60px) translateX(-60px);
+	-webkit-transform-origin: center;
 }

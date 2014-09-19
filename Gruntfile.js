@@ -19,11 +19,11 @@ module.exports = function (grunt) {
 				tasks: ['clean','sass:dev','jshint','requirejs:dev','includereplace:dev']
 			},
 			foldline: {
-				files: ['css/src/fold-line.{scss,sass}'],
+				files: ['sass/fold-line.{scss,sass}'],
 				tasks: ['clean:css','sass:dev','jshint','requirejs:dev','includereplace:dev']
 			},
 			sass: {
-				files: ['css/src/**/*.{scss,sass}','!css/src/fold-line.{scss,sass}'],
+				files: ['sass/**/*.{scss,sass}','!sass/fold-line.{scss,sass}'],
 				tasks: ['clean:css','sass:dev']
 			},
 			js: {
@@ -138,7 +138,7 @@ module.exports = function (grunt) {
 			prod: {
 				options: {
 					globals: {
-						title: 'unconfigured website',
+						title: 'Union UPnP Configuration',
 						description: 'please configure your website'
 					}
 				},
@@ -148,7 +148,7 @@ module.exports = function (grunt) {
 			dev: {
 				options: {
 					globals: {
-						title: 'unconfigured website',
+						title: 'Union UPnP Configuration',
 						description: 'please configure your website'
 					}
 				},
