@@ -1,6 +1,7 @@
 {
 	"media": {
 		"paths": ["/Users/analogrithems/Movies", "/Users/analogrithems/Music"]
-	}
+	},
+	"db": "./dataStore"
 	
 }

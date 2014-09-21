@@ -5,3 +5,4 @@ build/*
 !build/package.json
 !build/fonts
 js/lib/dd/*
+dataStore/*
