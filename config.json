@@ -1,7 +1,8 @@
 {
 	"media": {
-		"paths": ["/Users/analogrithems/Music/Trojan"]
+		"paths": ["/Users/analogrithems/Movies", "/Users/analogrithems/Music"]
 	},
-	"db": "./dataStore"
+	"db": "./dataStore",
+	"probe_threads": 0
 	
 }

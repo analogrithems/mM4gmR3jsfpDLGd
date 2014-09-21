@@ -82,22 +82,30 @@ var Db = require('./model').collection('audio'),
 								console.log("Error inserting record! ",err);
 							}else{
 								self.id = d._id;
-								console.log("Data inserted was:",d);
 							}
 							
 						});
 					}else{
 						//lets update the record in the dm
-						console.log("Record Exists already, Update:",item,"\n\n");
+						Db.update({_id: self.id},self.out());
 					}
 				}
 			});
-		}
+		};
+		
 		
 		self.fetchID3 = function(){
 
+			if(config.get('probe_threads') > 10){
+				console.log("Probe threads full, waiting");
+				setTimeout(self.fetchID3(), 500);
+			}
+			config.set('probe_threads',config.get('probe_threads') + 1);
+
 			Ffmpeg.ffprobe(self.path, function(err, m) {
-				if(err){
+				config.set('probe_threads',config.get('probe_threads') - 1);
+
+ 				if(err){
 					console.log("Error Probbing file! ",self.path,err);
 				}else{
 				    if( dd.type(m,'object') ){
@@ -108,41 +116,41 @@ var Db = require('./model').collection('audio'),
 						    if( dd.type(m.format.tags,'object') ){
 						    	var t = m.format.tags;
 							    if( dd.type(t.artist,'string') ){
-								    self.artist = t.artist;
+								    self.artist = t.artist.trim();
 							    }
 							    if( dd.type(t.title,'string') ){
-								    self.title = t.title;
+								    self.title = t.title.trim();
 							    }
 							    if( dd.type(t.album,'string') ){
-								    self.album = t.album;
+								    self.album = t.album.trim();
 							    }
 							    if( dd.type(t.genre,'string') ){
-								    self.genre.push(t.genre);
+								    self.genre.push(t.genre.trim());
 							    }else if(dd.type(t.genre,'array') ){
 							    	for(var i = 0; i < t.genre.length; i++){
-								    	self.genre.push(t.genre[i]);	
+								    	self.genre.push(t.genre[i].trim());	
 							    	}
 							    }
 								if( dd.type(t.TCAT,'string') ){
-								    self.genre.push(t.TCAT);
+								    self.genre.push(t.TCAT.trim());
 							    }
 							    if( dd.type(t.year,'string') ){
-								    self.year = t.year;
+								    self.year = t.year.trim();
 							    }
 							    if( dd.type(t.date,'string') ){
-								    self.year = t.date;
+								    self.year = t.date.trim();
 							    }
 							    if( dd.type(t.track,'string') ){
-								    self.track = t.track;
+								    self.track = t.track.trim();
 							    }
 							    if( dd.type(t.album_artist,'string') ){
-								    self.album_artist = t.album_artist;
+								    self.album_artist = t.album_artist.trim();
 							    }
 							    if( dd.type(t.disc,'string') ){
-								    self.disc = t.disc;
+								    self.disc = t.disc.trim();
 							    }
 							    if( dd.type(t.disc,'string') ){
-								    self.disc = t.disc;
+								    self.disc = t.disc.trim();
 							    }
 						    }
 					    }
@@ -165,9 +173,6 @@ var Db = require('./model').collection('audio'),
 					self.parentDir = path.dirname(data.path);
 					var basename = path.basename(data.path);
 					self.extension = path.extname(basename);
-					
-					//fetch tags
-					self.fetchID3();
 				}
 			}			
 		}
